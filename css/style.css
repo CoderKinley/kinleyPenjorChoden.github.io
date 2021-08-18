@@ -1,0 +1,347 @@
+/* font importing */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+:root {
+  --color-theme: rgb(8, 0, 43);
+  /* --color-theme: rgb(88, 8, 8); */
+  --font-sora: "Sora", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+}
+html {
+  letter-spacing: 0.1em;
+  line-height: 2rem;
+}
+* {
+  padding: 0%;
+  margin: 0;
+  transition: all 0.3s linear;
+  /* border: none; */
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  scroll-behavior: smooth;
+}
+.display-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 1.8rem;
+  font-family: var(--font-sora);
+  font-weight: 900;
+  color: var(--color-theme);
+  /* text-shadow: 2px 2px ; */
+}
+h2 {
+  font-size: 1.6rem;
+  font-family: var(--font-sora);
+  font-weight: 800;
+  color: var(--color-theme);
+}
+h3 {
+  font-size: 1.424rem;
+  font-family: var(--font-sora);
+  font-weight: 900;
+  color: var(--color-theme);
+}
+h4 {
+  font-size: 1.266rem;
+}
+h5 {
+  font-size: 1.125rem;
+}
+h6 {
+  font-size: 1rem;
+}
+.text-shadow {
+  text-shadow: 1px 1px rgb(255, 255, 255);
+}
+
+.common-p-font {
+  font-size: 1.125rem;
+}
+section {
+  padding: 2rem 9%;
+}
+
+/* header  */
+header .nav-bar {
+  justify-content: space-between;
+  padding: 0% 1rem;
+  height: 3rem;
+  background: linear-gradient(
+    rgba(252, 46, 200, 0.8),
+    rgba(252, 144, 144, 0.9)
+  );
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.637);
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  /* position: relative; */
+}
+header .nav-bar .nav-img h3 {
+  font-size: 1.6rem;
+  font-family: var(--font-sora);
+  font-weight: 700;
+}
+header .nav-bar .nav-img h3 span {
+  color: rgb(185, 28, 54);
+}
+header .nav-bar .nav-items a {
+  color: rgb(56, 56, 56);
+  margin: 0 0.5rem;
+}
+header .nav-bar .nav-items a:hover {
+  color: rgb(10, 4, 41);
+}
+header .nav-burger {
+  display: none;
+}
+header .nav-burger i {
+  color: rgb(48, 48, 48);
+  font-size: 1.6rem;
+}
+header .nav-burger i:hover {
+  color: rgb(12, 1, 53);
+}
+
+/* banner container */
+.banner-cont {
+  background: url("../images/BannerMaker_29072021_205947.png");
+  height: 100vh;
+  background-color: rgba(255, 250, 252, 0.986);
+  margin: auto;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem 5rem;
+  position: relative;
+  z-index: -2;
+}
+
+.banner-cont .heading-container h2 {
+  margin: 1rem 0;
+}
+
+/* adding the blinking cursor */
+.txtes {
+  position: relative;
+  z-index: -1;
+  letter-spacing: 0.1em;
+}
+.txtes::after {
+  content: "";
+  position: absolute;
+  height: 25px;
+  border-right: 4px solid rgb(10, 3, 68);
+  margin-left: 0.2rem;
+  animation: blink 0.3s infinite ease;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* gallery section of the section */
+.gallery {
+  background-color: rgba(212, 211, 255, 0.397);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.gallery h3 span {
+  border: 1px solid rgb(18, 18, 61);
+  border-radius: 0.2rem;
+  width: 4.5rem;
+  background: rgb(255, 152, 56);
+  padding: 0.2rem;
+}
+.owl-container {
+  margin: 4rem 0;
+}
+.image-container {
+  overflow: hidden;
+}
+.image-container img:hover {
+  transform: scale(1.07);
+}
+
+.img-z {
+  width: 100%;
+  margin-top: 4rem;
+}
+/* quotation section */
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+.main-container .images {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 3rem 0;
+}
+.main-container .images img {
+  width: 20rem;
+  margin: 0.5rem 0.5rem;
+}
+
+.container-inner {
+  background-color: rgba(134, 132, 250, 0.562);
+}
+
+/* my message container */
+.mymessage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mymessage-container .message-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* grid-template-columns: repeat(auto-fill, 186px); */
+  margin: 2rem 0;
+}
+.disable-text-transform {
+  text-transform: none;
+}
+.red-color {
+  color: rgb(255, 65, 65);
+  font-size: 3rem;
+}
+
+/* message container */
+
+.message-personal .container-of-message {
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.message-personal .container-of-message .container-of-message {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.message-personal .container-of-message .message-content {
+  width: 20rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 2rem rgb(124, 0, 0);
+  padding: 1rem;
+  background-color: rgb(241, 240, 255);
+  margin: 1rem;
+}
+.message-personal .container-of-message .message-content:hover {
+  transform: scale(1.02);
+}
+.message-personal .message-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.birthday-banner {
+  position: relative;
+  padding: 0;
+  text-align: center;
+}
+.image-container-cnt {
+  position: relative;
+}
+.image-container-cnt img {
+  width: 100%;
+}
+.pema {
+  position: absolute;
+  top: 60%;
+  text-align: center;
+}
+.image-container-tts img {
+  width: 100%;
+}
+.mymessage-container {
+  background-color: white;
+}
+
+/* music play button */
+.floating-button {
+  position: fixed;
+  top: 80%;
+  right: 2rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+#music-button {
+  /* position: fixed; */
+  top: 50%;
+  right: 2rem;
+  margin: 0.5rem 0rem;
+  padding: 0.5rem 0.6rem;
+  color: rgb(255, 98, 125);
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 0.6rem 0.7rem rgb(185, 28, 54);
+  z-index: 1000;
+}
+#music-button:hover {
+  transform: scale(1.07);
+}
+#mute {
+  /* position: fixed; */
+  top: 60%;
+  right: 2rem;
+  color: blue;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.6rem;
+  border: none;
+  box-shadow: 0 0.6rem 0.7rem rgb(40, 17, 247);
+  z-index: 100;
+}
+#mute:hover {
+  transform: scale(1.07);
+}
+
+footer {
+  color: rgb(255, 94, 228);
+  background: linear-gradient(rgba(255, 25, 25, 0.9), rgb(255, 94, 228, 0.8));
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem 0;
+  border-radius: 2rem 2rem 0 0;
+}
+.color-red {
+  color: rgb(253, 44, 44);
+  font-size: 3rem;
+}
+.color-cake {
+  margin: 0.5rem 0;
+  color: #850400;
+  font-size: 2rem;
+}
+
+/* our image container */
+.image-container-our {
+  margin: 2rem 0;
+}
+.image-container-our .content img {
+  width: 100%;
+}
+.image-container-our .content img:hover {
+  transform: scale(1.06);
+}
+.image-container-our .content {
+  overflow: hidden;
+}
